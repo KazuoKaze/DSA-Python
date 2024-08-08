@@ -816,7 +816,7 @@ class AVLTree:
             else:
                 temp = self.get_min_right_val(root_node.right)
                 root_node.data = temp.data
-                root_node.right = self.delete(root_node.right, data)
+                root_node.right = self.delete(root_node.right, temp.data)
 
         root_node.height = 1 + max(self.get_height(root_node.left), self.get_height(root_node.right))
 
